@@ -35,6 +35,3 @@ tags_path: ctags/
 
 gems:
   - jekyll-sitemap
-  - jekyll-paginate
-paginate:15
-paginate_path: "page:num"
