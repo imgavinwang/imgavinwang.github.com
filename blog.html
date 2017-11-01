@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog 
+header: Blog
+group: navigation
+---
+
+<div>
+
+  	{% assign index = true %}
+  	{% assign year  = '' %}
+
+    <ul class="article-list">
+    {% for post in paginator.posts %}
+		{% assign page = post %}
+        {% assign date = page.date | date: "%Y" %}
+
+        {% if year != date %}
+            {% assign year = date %}
+            <li class="list-year"> {{year}} </li>
+        {% endif%}
+
+        <li class="list-item">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</div>
+
+<!-- 分页链接 -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+
+<div class="clearfix"></div>

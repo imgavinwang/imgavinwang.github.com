@@ -1,0 +1,40 @@
+# Site settings
+title: Just make it happen!
+author: Gavin
+author_avatar: /images/header.jpg
+email: netgene@163.com
+description: junwang
+url: "http://junwang.me"
+domain: "http://junwang.me"
+github_username: netgene
+github_site_repo: netgene/netgene.github.io
+disqus: whileme
+
+
+# Build settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+    use_coderay: true
+#    extensions: ["fenced_code_blocks", "autolink", "tables", "smart"]
+    extensions: ["fenced_code_blocks", "footnotes", "smart", hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+
+sass:
+    style: :compressed
+    sass_dir: _sass
+
+permalink: pretty
+excerpt_separator: "<!-- more -->"
+
+# path
+categories_path: categories/
+tags_path: ctags/
+
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+paginate:15
+paginate_path: "page:num"
