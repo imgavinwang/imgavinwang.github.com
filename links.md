@@ -1,15 +1,10 @@
 ---
-layout: default
+layout: page
 title: Links
 permalink: /links/
+comments: false
+author_footer: false
 ---
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Links</h1>
-
-      <hr />
 
 **think**
 
@@ -65,7 +60,3 @@ permalink: /links/
 **关注**
 
 - [微盟 http://www.weimob.com/](http://www.weimob.com/)
-
-
-  </div>
-</div>
